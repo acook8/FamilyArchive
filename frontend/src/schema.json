@@ -1,0 +1,37 @@
+[
+    {
+        "projectId" : 1,
+        "projectName" : "Project 1",
+        "collections" :[
+            {
+                "collectionId" : 1,
+                "collectionName" : "collection 1",
+                "startYear" : 1800,
+                "endYear" : 1850,
+                "description" : "this is my collection",
+                "storageLocation" : "in a box",
+                "objects":[
+                    {
+                        "objectId" : 1,
+                        "objectName" : "photo",
+                        "date" : "1800",
+                        "location" : "Kansas",
+                        "objectType" : "photo",
+                        "people" :[
+                            "personId1",
+                            "personId2"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "people":[
+            {
+                "personId" : 1,
+                "firstName" : "Alex",
+                "middleName" : "Thomas",
+                "lastName" : "Cook"
+            }
+        ]
+    }
+]
