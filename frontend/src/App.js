@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Navigation from './Navigation'
 import Home from './Home'
 import CollectionGallery from './CollectionGallery'
-import ExampleModal from './ExampleModal'
 import CreateCollection from './CreateCollection'
 
 class App extends React.Component {

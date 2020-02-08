@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Nav,Navbar,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
-
+import { Link } from "react-router-dom";
 
 class Navigation extends Component {
     constructor(props){
@@ -14,13 +14,13 @@ class Navigation extends Component {
         // let chooseProject = (project) => this.setState({project:})
         return (
             <Navbar bg="light" expand="lg" sticky="top">
-                <Navbar.Brand href="/">Family Archive</Navbar.Brand>
+                <Navbar.Brand>Family Archive</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/collections">Collections</Nav.Link>
-                        <Nav.Link href="/people">People</Nav.Link>
+                        <Link to="/" className="nav-link">Home</Link>
+                        <Link to="/collections" className="nav-link">Collections</Link>
+                        <Link to="/people" className="nav-link">People</Link>
                     </Nav>
                     <NavDropdown title={this.state.project} id="projects">
                         <NavDropdown.Item onClick= {event => this.setState({project: 'Project 1'})}>Project1</NavDropdown.Item>

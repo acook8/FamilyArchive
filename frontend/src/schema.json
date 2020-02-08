@@ -9,7 +9,7 @@
                 "startYear" : 1800,
                 "endYear" : 1850,
                 "description" : "this is my collection",
-                "storageLocation" : "in a box",
+                "storageLocation" : "Box A",
                 "objects":[
                     {
                         "objectId" : 1,
@@ -30,7 +30,10 @@
                 "personId" : 1,
                 "firstName" : "Alex",
                 "middleName" : "Thomas",
-                "lastName" : "Cook"
+                "lastName" : "Cook",
+                "familySearchId" : null,
+                "birthYear" : 1993,
+                "deathYear" : null
             }
         ]
     }
