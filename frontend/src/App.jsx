@@ -1,9 +1,9 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Navigation from './Navigation'
-import Home from './Home'
-import CollectionGallery from './CollectionGallery'
-import CreateCollection from './CreateCollection'
+import Navigation from './Components/Navigation'
+import Home from './Components/Home'
+import CollectionGallery from './Components/CollectionGallery'
+import CreateCollection from './Components/CreateCollection'
 
 class App extends React.Component {
   render() {
