@@ -31,6 +31,10 @@ class CreateObject extends React.Component {
                 </Button>
 
                 <Modal show={this.state.open} onHide={closeModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Upload Object</Modal.Title>
+                    </Modal.Header>
+                    
                     <Modal.Body>
                         <p>Object Name</p>
                         <Form inline>
