@@ -10,6 +10,7 @@
                 "endYear" : 1850,
                 "description" : "this is my collection",
                 "storageLocation" : "Box A",
+                "imageURL" : "/photo1",
                 "objects":[
                     {
                         "objectId" : 1,
@@ -17,6 +18,8 @@
                         "date" : "1801",
                         "location" : "Kansas",
                         "objectType" : "photo",
+                        "imageURL" : "/photo1",
+                        "description" : "this is a photo",
                         "people" :[
                             "personId1",
                             "personId2"

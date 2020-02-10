@@ -1,4 +1,4 @@
-import React, { Component,useState } from 'react';
+import React from 'react';
 import {Modal,Button,Form,FormControl} from 'react-bootstrap'
 
 class CreateCollection extends React.Component {
@@ -22,6 +22,7 @@ class CreateCollection extends React.Component {
         let handleSubmit = () => {
           this.setState({ open: false })
           //api post call
+          //clear state
         }
         
      
