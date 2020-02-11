@@ -4,8 +4,7 @@ import Navigation from './Components/Navigation'
 import Home from './Components/Home'
 import CollectionGallery from './Components/CollectionGallery'
 import CreateCollection from './Components/CreateCollection'
-import ObjectGallery from './Components/ObjectGallery';
-import CreateObject from './Components/CreateObject'
+import ObjectComponent from './Components/ObjectComponent'
 
 class App extends React.Component {
   render() {
@@ -22,10 +21,10 @@ class App extends React.Component {
               <CreateCollection />
               <CollectionGallery />
             </Route>
-            <Route path='/collection/:collectionId' >
-              <h1>Objects</h1>
+            <Route path='/collection/:collectionId' component={ObjectComponent}>
+              {/* <h1>Objects</h1>
               <CreateObject />
-              <ObjectGallery />
+              <ObjectGallery /> */}
             </Route>
           </Switch>
         </div>

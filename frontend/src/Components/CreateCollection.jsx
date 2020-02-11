@@ -20,9 +20,16 @@ class CreateCollection extends React.Component {
         let closeModal = () => this.setState({ open: false })
         let openModal = () => this.setState({open:true})
         let handleSubmit = () => {
-          this.setState({ open: false })
           //api post call
-          //clear state
+          this.setState({
+            collectionName: '',
+            startYear: '',
+            endYear: '',
+            collectionDescription: '',
+            collectionLocation: '',
+            open: false
+          })
+          
         }
         
      

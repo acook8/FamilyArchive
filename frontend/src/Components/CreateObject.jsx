@@ -19,9 +19,15 @@ class CreateObject extends React.Component {
         let closeModal = () => this.setState({open: false});
         let openModal = () => this.setState({open: true});
         let handleSubmit = () => {
-            this.setState({open: false})
             //api post call
-            //clear state
+            this.setState({
+                objectName: '',
+                date: '',
+                location: '',
+                imageURL: '',
+                description: '',
+                open: false
+            })
         }
 
         return (
