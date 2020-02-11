@@ -1,7 +1,7 @@
 import React from 'react';
 import {CardDeck} from 'react-bootstrap'
 import { CollectionCard } from "./CollectionCard";
-
+import { axios } from "axios";
 
 const data = [
     {collectionId : 1, name: "Collection 1", start_date: "1800", end_date: "1850", image_url: "https://previews.123rf.com/images/benchart/benchart1204/benchart120400018/13237662-illustration-of-a-cartoon-opened-brown-book.jpg"},
@@ -10,8 +10,13 @@ const data = [
 ]
 
 
+
+
 const CollectionGallery = () => (
-	<CardDeck>
+	// let getData = async () => {
+    //     const data = await axios.get(`http://localhost:5000/collections`)
+    // }
+    <CardDeck>
   	    {data.map(collection => <CollectionCard {...collection}/>)}
 	</CardDeck>
 );
