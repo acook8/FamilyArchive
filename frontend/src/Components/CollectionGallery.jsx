@@ -9,13 +9,14 @@ const data = [
     {collectionId : 3, name: "Collection 3", start_date: "1956", end_date: "1970", image_url: "https://previews.123rf.com/images/benchart/benchart1204/benchart120400018/13237662-illustration-of-a-cartoon-opened-brown-book.jpg"}
 ]
 
-
+const getData = async () => {
+    const apiData = await axios.get('http://localhost:5000/collections')
+    return apiData
+}
 
 
 const CollectionGallery = () => (
-	// let getData = async () => {
-    //     const data = await axios.get(`http://localhost:5000/collections`)
-    // }
+    // let data = getData()
     <CardDeck>
   	    {data.map(collection => <CollectionCard {...collection}/>)}
 	</CardDeck>

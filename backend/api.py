@@ -1,7 +1,9 @@
 import flask
 from flask import request, jsonify
+from flask_cors import CORS, cross_origin
 
 app = flask.Flask(__name__)
+CORS(app)
 app.config["DEBUG"] = True
 
 collections = [
@@ -10,6 +12,32 @@ collections = [
     {"collectionId" : 3, "name": "Collection 3", "start_date": "1956", "end_date": "1970", "image_url": "https://previews.123rf.com/images/benchart/benchart1204/benchart120400018/13237662-illustration-of-a-cartoon-opened-brown-book.jpg"}
 ]
 
+objects = [
+    {
+        "objectId": 1,
+        "objectName": "Photo 1",
+        "date": "1800",
+        "location": "Kansas",
+        "imageURL": "http://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
+        "description": "this is a photo",
+    },
+    {
+        "objectId": 2,
+        "objectName": "Photo 2",
+        "date": "1805",
+        "location": "Kansas",
+        "imageURL": "http://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
+        "description": "this is a photo",
+    },
+    {
+        "objectId": 3,
+        "objectName": "Photo 2",
+        "date": "1805",
+        "location": "Kansas",
+        "imageURL": "http://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
+        "description": "this is a photo",
+    }
+]
 
 @app.route('/', methods=['GET'])
 def home():
@@ -21,7 +49,7 @@ def getCollections():
     if 'collectionId' in request.args:
         collectionId = int(request.args['collectionId'])
     else:
-        return jsonify(collections)
+        return "error"
 
     results = []
 
@@ -31,6 +59,21 @@ def getCollections():
     
     return jsonify(results)
 
+
+@app.route('/objects', methods=['GET'])
+def getObjects():
+    if 'objectId' in request.args:
+        objectId = int(request.args['objectId'])
+    else:
+        return jsonify(objects)
+
+    results = []
+
+    for object in objects:
+        if object['objectId'] == objectId:
+            results.append(object)
+
+    return jsonify(results)
 
 app.run()
 
