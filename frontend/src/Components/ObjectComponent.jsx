@@ -19,10 +19,10 @@ class ObjectComponent extends React.Component {
         let collectionId = this.props.match.params.collectionId;
         const response = await axios.get('http://localhost:5000/collections?collectionId=' + collectionId)
         const collection = response.data
-        // to be done properly this should be mapped
-        const collectionName = collection[0].name;
-        const startYear = collection[0].start_date;
-        const endYear = collection[0].end_date;
+        console.log(collection)
+        const collectionName = collection.collectionName;
+        const startYear = collection.startYear;
+        const endYear = collection.endYear;
         this.setState({collectionName: collectionName})
         this.setState({startYear: startYear})
         this.setState({endYear: endYear})
@@ -32,7 +32,7 @@ class ObjectComponent extends React.Component {
         return (
             <div>
                 <CollectionInfo 
-                  name = {this.state.collectionName} 
+                  collectionName = {this.state.collectionName} 
                   startYear = {this.state.startYear}
                   endYear = {this.state.endYear}
                 />

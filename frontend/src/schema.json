@@ -1,43 +1,55 @@
 [
     {
-        "projectId" : 1,
-        "projectName" : "Project 1",
-        "collections" :[
+        "projectId": 1,
+        "projectName": "Project 1",
+        "collections": [
             {
-                "collectionId" : 1,
-                "collectionName" : "collection 1",
-                "startYear" : 1800,
-                "endYear" : 1850,
-                "description" : "this is my collection",
-                "storageLocation" : "Box A",
-                "imageURL" : "/photo1",
-                "objects":[
+                "collectionId": 1,
+                "collectionName": "collection 1",
+                "startYear": 1800,
+                "endYear": 1850,
+                "description": "this is my collection",
+                "storageLocation": "Box A",
+                "imageURL": "https://previews.123rf.com/images/benchart/benchart1204/benchart120400018/13237662-illustration-of-a-cartoon-opened-brown-book.jpg",
+                "objects": [
                     {
-                        "objectId" : 1,
-                        "objectName" : "photo",
-                        "date" : "1801",
-                        "location" : "Kansas",
-                        "objectType" : "photo",
-                        "imageURL" : "/photo1",
-                        "description" : "this is a photo",
-                        "people" :[
+                        "objectId": 1,
+                        "objectName": "photo",
+                        "date": "1801",
+                        "location": "Kansas",
+                        "objectType": "photo",
+                        "imageURL": "/photo1",
+                        "description": "this is a photo",
+                        "people": [
                             "personId1",
                             "personId2"
                         ]
                     }
                 ]
             }
-        ],
-        "people":[
-            {
-                "personId" : 1,
-                "firstName" : "Alex",
-                "middleName" : "Thomas",
-                "lastName" : "Cook",
-                "familySearchId" : null,
-                "birthYear" : 1993,
-                "deathYear" : null
-            }
         ]
     }
 ]
+
+{
+    "people": [
+        {
+            "personId": 1,
+            "firstName": "Alex",
+            "middleName": "Thomas",
+            "lastName": "Cook",
+            "familySearchId": null,
+            "birthYear": 1993,
+            "deathYear": null
+        }
+    ]
+}
+
+
+{
+    "users" :[
+        {
+            "userId" : 1,
+        }
+    ]
+}

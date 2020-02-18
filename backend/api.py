@@ -1,6 +1,7 @@
 import flask
 from flask import request, jsonify
 from flask_cors import CORS, cross_origin
+import getCollection
 
 app = flask.Flask(__name__)
 CORS(app)
@@ -48,15 +49,10 @@ def home():
 def getCollections():
     if 'collectionId' in request.args:
         collectionId = int(request.args['collectionId'])
+        results = getCollection.getCollectionById(collectionId)
     else:
-        return "error"
+        results = getCollection.getAllCollections()
 
-    results = []
-
-    for collection in collections:
-        if collection['collectionId'] == collectionId:
-            results.append(collection)
-    
     return jsonify(results)
 
 
