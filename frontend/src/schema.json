@@ -2,6 +2,7 @@
     {
         "projectId": 1,
         "projectName": "Project 1",
+        "public": true,
         "collections": [
             {
                 "collectionId": 1,
