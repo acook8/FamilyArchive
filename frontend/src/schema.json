@@ -50,6 +50,10 @@
     "users" :[
         {
             "userId" : 1,
+            "firstName" : "Alex",
+            "lastName" : "Cook",
+            "emailAddress" : "alex.cook@familyarchive.com",
+            "password" : "hash"
         }
     ]
 }
