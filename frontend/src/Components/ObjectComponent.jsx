@@ -17,7 +17,7 @@ class ObjectComponent extends React.Component {
     
       async componentDidMount() {
         let collectionId = this.props.match.params.collectionId;
-        const response = await axios.get('http://localhost:5000/collections?collectionId=' + collectionId)
+        const response = await axios.get('https://familyarchive-backend.duckdns.org/collections?collectionId=' + collectionId)
         const collection = response.data
         console.log(collection)
         const collectionName = collection.collectionName;
