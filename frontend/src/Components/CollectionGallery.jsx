@@ -10,7 +10,7 @@ const data = [
 ]
 
 const getData = async () => {
-    const apiData = await axios.get('http://familyarchive-backend.duckdns.org/collections')
+    const apiData = await axios.get('https://familyarchive-backend.duckdns.org/collections')
     return apiData
 }
 

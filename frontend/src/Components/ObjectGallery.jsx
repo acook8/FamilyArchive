@@ -8,7 +8,7 @@ const data = [
         objectName: "Photo 1",
         date: "1800",
         location: "Kansas",
-        imageURL: "http://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
+        imageURL: "https://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
         description: "this is a photo",
     },
     {
@@ -16,7 +16,7 @@ const data = [
         objectName: "Photo 2",
         date: "1805",
         location: "Kansas",
-        imageURL: "http://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
+        imageURL: "https://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
         description: "this is a photo",
     },
     {
@@ -24,7 +24,7 @@ const data = [
         objectName: "Photo 2",
         date: "1805",
         location: "Kansas",
-        imageURL: "http://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
+        imageURL: "https://s3.amazonaws.com/opa-photos/photos/photos/000/061/403/large/Family.jpg?1474852540",
         description: "this is a photo",
     }
 ]
