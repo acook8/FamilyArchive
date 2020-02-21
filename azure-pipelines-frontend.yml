@@ -28,11 +28,9 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- script: ls $(agent.builddirectory)/s
-
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)/s/build'
+    SourceFolder: '$(agent.builddirectory)/s/frontend/build'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
