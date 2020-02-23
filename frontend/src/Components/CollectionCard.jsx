@@ -7,14 +7,14 @@ export class CollectionCard extends React.Component {
     render() {
         const collection = this.props;
         return (
-            <Link to={`/collection/${collection.collectionId}`}>
+            <Link to={`/collection/${collection._id}`}>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={collection.image_url} />
+                    <Card.Img variant="top" src={collection.imageURL} />
                     <Card.Body>
-                        <Card.Title>{collection.name}</Card.Title>
+                        <Card.Title>{collection.collectionName}</Card.Title>
                         <Card.Text>
-                            <div>Start date: {collection.start_date}</div>
-                            <div>End date: {collection.end_date}</div>
+                            <div>Start date: {collection.startYear}</div>
+                            <div>End date: {collection.endYear}</div>
                         </Card.Text>
                     </Card.Body>
                 </Card>

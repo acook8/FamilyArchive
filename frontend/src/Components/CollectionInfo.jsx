@@ -3,7 +3,7 @@ import React from 'react';
 
 class CollectionInfo extends React.Component {
     render() {
-        const collectionInfo = this.props;
+        // const collectionInfo = this.props;
         const collectionName=this.props.collectionName
         const startYear = this.props.startYear
         const endYear = this.props.endYear

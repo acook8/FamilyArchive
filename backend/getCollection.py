@@ -20,3 +20,7 @@ def getAllCollections():
         results.append(collection)
 
     return results
+
+
+
+# "_id" : getNextCollectionSequenceValue("collectionId")
