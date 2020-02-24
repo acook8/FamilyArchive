@@ -1,5 +1,7 @@
 import React from 'react';
 import {Modal,Button,Form,FormControl} from 'react-bootstrap'
+import axios from "axios";
+
 
 class CreateCollection extends React.Component {
 
@@ -21,6 +23,19 @@ class CreateCollection extends React.Component {
         let openModal = () => this.setState({open:true})
         let handleSubmit = () => {
           //api post call
+          axios.post('http://localhost:5000/addCollection', {
+            collectionName: this.state.collectionName,
+            startYear: this.state.startYear,
+            endYear: this.state.endYear,
+            description: this.state.collectionDescription,
+            storageLocation: this.state.collectionLocation
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
           this.setState({
             collectionName: '',
             startYear: '',

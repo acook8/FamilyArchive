@@ -4,7 +4,7 @@ import ObjectGallery from './ObjectGallery';
 import CollectionInfo from './CollectionInfo'
 import axios from "axios";
 
-
+// TODO: Rename this component
 class ObjectComponent extends React.Component {
     constructor(props){
         super(props)
@@ -15,6 +15,7 @@ class ObjectComponent extends React.Component {
         };
       }
     
+      // TODO: don't render before api is returned https://reactjs.org/docs/react-component.html
       async componentDidMount() {
         let collectionId = this.props.match.params.collectionId;
         const response = await axios.get('https://familyarchive-backend.duckdns.org/collections?collectionId=' + collectionId)
