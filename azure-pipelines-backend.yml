@@ -1,0 +1,27 @@
+# Very basic pipeline to create an artifact
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - backend/*/*
+    exclude:
+    - frontend/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(agent.builddirectory)/s/backend'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
