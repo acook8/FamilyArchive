@@ -16,7 +16,7 @@ class ObjectComponent extends React.Component {
       }
     
       // TODO: don't render before api is returned https://reactjs.org/docs/react-component.html
-      async componentDidMount() {
+      async componentWillMount() {
         let collectionId = this.props.match.params.collectionId;
         const response = await axios.get('https://familyarchive-backend.duckdns.org/collections?collectionId=' + collectionId)
         const collection = response.data

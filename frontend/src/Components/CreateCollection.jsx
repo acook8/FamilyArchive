@@ -23,7 +23,7 @@ class CreateCollection extends React.Component {
         let openModal = () => this.setState({open:true})
         let handleSubmit = () => {
           //api post call
-          axios.post('http://localhost:5000/addCollection', {
+          axios.post('https://familyarchive-backend.duckdns.org/addCollection', {
             collectionName: this.state.collectionName,
             startYear: this.state.startYear,
             endYear: this.state.endYear,
@@ -44,6 +44,7 @@ class CreateCollection extends React.Component {
             collectionLocation: '',
             open: false
           })
+          this.props.rerenderParentCallback();
           
         }
         

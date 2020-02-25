@@ -16,13 +16,11 @@ class CollectionGallery extends React.Component {
       async componentDidMount() {
         let apiData = await axios.get('https://familyarchive-backend.duckdns.org/collections')
         let data = apiData.data
-        console.log("apiData: ", apiData)
         this.setState({collections: data})
       }
 
     render() {
         const collections = this.state.collections
-        console.log("collections: ", collections[0])
         return (
             <CardDeck>
   	            {collections.map(collection => <CollectionCard {...collection}/>)}
